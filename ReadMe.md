@@ -20,8 +20,8 @@
    - macOS: `~/Library/Rime`
    - Linux: `~/.config/rime`
 4. - Windows 平台（小狼毫 >= 0.14.0）
-     - 将 `out-mingw` 下所有文件复制到小狼毫的**程序**文件夹下
-     - 将 `lua` 下所有文件复制到小狼毫的**用户目录**下
+     - 将 `out-mingw` 下所有文件复制到小狼毫的**用户目录**lua文件夹下
+     - 将 `lua` 下所有文件复制到小狼毫的**用户目录**lua文件夹下
    - Linux 平台（librime 需编译 lua 支持）
      - 将 `out-linux` 下所有文件复制到 `/usr/local/lib/lua/$LUAV` 下
      - 将 `lua` 下所有文件复制到**用户目录**下
@@ -33,7 +33,7 @@
 ```yaml
 engine:
   filters:
-    - lua_filter@*input_text   # 候选词翻译
+    - lua_filter@*cloud_translation   # 候选词翻译
 ```
 
 4. 重新部署 Rime 输入法
@@ -52,7 +52,7 @@ engine:
 
 ## 配置说明
 
-所有配置都在 `lua/trans-all.lua` 文件的开头部分：
+所有配置都在 `lua/cloud_translation.lua` 文件的开头部分：
 
 ```lua
 local config = {
